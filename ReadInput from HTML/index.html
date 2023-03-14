@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>personal expense</title>
+    <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+
+    </style>
+</head>
+
+    
+    <input id="inputAmount" type="text"></input>
+    <button id="btnexpense"> + </button>
+
+    <script>
+        //Take a number which startes from zero
+        let totalExpense=0;
+
+        function counterExpense()
+        {
+            //Read the value from input
+          const inputElement=  document.querySelector("#inputAmount");
+          const textAmount = inputElement.value;
+
+          console.log({textAmount});
+
+          //convert text to integer
+         const expense = parseInt(textAmount, 10);
+          console.log({expense});
+             
+            // Total amount expense
+        totalExpense= totalExpense + expense;
+        console.log({totalExpense});
+        }
+
+       const element =  document.querySelector("#btnexpense");
+        console.log(element);
+        
+     element.addEventListener("click",counterExpense,false);
+
+        
+       
+
+
+
+    </script>
+</body>
+</html>
